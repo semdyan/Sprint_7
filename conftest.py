@@ -52,7 +52,6 @@ def generate_order_data():
                   'phone': generate_random_string(10),
                   'rentTime': generate_random_number(2),
                   'deliveryDate': generate_random_date(),
-                  'comment': generate_random_string(10),
-                  'color': ['BLACK', 'GREY']}
+                  'comment': generate_random_string(10)}
 
     return order_data

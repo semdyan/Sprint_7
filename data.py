@@ -8,3 +8,5 @@ class Messages:
     message_create_courier_409 = 'Этот логин уже используется. Попробуйте другой.'
     message_login_courier_400 = 'Недостаточно данных для входа'
     message_login_courier_404 = 'Учетная запись не найдена'
+
+scooter_colors = [['BLACK'], ['GREY'], ['BLACK', 'GREY']]
