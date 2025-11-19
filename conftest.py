@@ -4,6 +4,7 @@ import requests
 
 from helpers import generate_random_string, generate_random_number, generate_random_date
 from methods.courier_methods import CourierMethods
+from data import Urls
 
 @pytest.fixture(scope='function', autouse=False)
 @allure.step('Генерация данных пользователя')
@@ -31,7 +32,7 @@ def register_and_return_user_data():
         "firstName": first_name
     }
 
-    response = requests.post('https://qa-scooter.praktikum-services.ru/api/v1/courier', data=order_data)
+    response = requests.post(f'{Urls.BASE_URL}{Urls.COURIER_URL}', data=order_data)
 
     if response.status_code == 201:
         user_data['login'] = login
