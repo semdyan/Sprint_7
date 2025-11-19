@@ -5,7 +5,7 @@ from methods.order_methods import OrderMethods
 from data import scooter_colors
 
 class TestCreateOrder:
-    @allure.title('Проверка кода и текста ответа при успешном создании заказа с одним из цветов')
+    @allure.title('Проверка кода и текста ответа при успешном создании заказа с разными сочетаниями цветов')
     @pytest.mark.parametrize('add_color', scooter_colors)
     def test_create_order_different_colors_success(self, generate_order_data, add_color):
         generate_order_data['color'] = add_color
